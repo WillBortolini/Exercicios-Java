@@ -1,2 +1,2 @@
 # Exercicios Java
-Exercicios que faço sobre Java para testar minha logica
+Exercicios que faço com Java para exercitar minha logica
