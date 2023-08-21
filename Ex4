@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+/**
+ *Os números de Fibonacci formam uma sequência em que cada número é igual à soma dos dois
+anteriores. Os dois primeiros números são, por definição igual a 1, segundo o exemplo abaixo:
+Ex: 1 1 2 3 5 8 13 ...
+Escreva um programa que carregue um carregue um número inteiro pelo teclado e indique se ele faz
+parte da sequência de Fibonacci.
+
+ * @author Bortolini
+ */
+public class Ex4 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int c1 = -1, c2=-1;
+        do{
+            c1 = teclado.nextInt();
+            c2 = teclado.nextInt();
+            if(c1!=0 && c2!=0){
+                if(c1>0){
+                    if(c2>0){
+                        System.out.println("primeiro");
+                    }else{
+                        System.out.println("quarto");
+                    }
+                }else{
+                    if(c2>0){
+                        System.out.println("segundo");
+                    }else{
+                        System.out.println("terceiro");
+                    }
+                }
+            }
+        }while(c1!=0 && c2!=0);
+    }
+    
+}
