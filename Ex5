@@ -1,0 +1,41 @@
+import java.util.Scanner;
+/**
+ *Escreva um módulo para calcular as raízes de uma equação de 2° grau. O módulo receber as
+constantes A, B e C da equação como parâmetro e retorna três valores: 2 raízes e um STATUS, seguindo os
+critérios:
+ú se houverem duas raízes retorna status 2;
+ú se houver uma raiz apenas retorna status 1 e um dos parâmetros de raiz igual a 0;
+ú se não houverem raízes retorna status 0 e os dois parâmetros de raiz igual a 0.
+
+ * @author Bortolini
+ */
+public class Ex5 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        float a = teclado.nextInt();
+        float b = teclado.nextInt();
+        float c = teclado.nextInt();
+        float r1, r2, delta;
+        int status;
+        if(((b*b)-(4*a*c))>0){
+            status = 2;
+            delta = (float)Math.sqrt((b*b)-(4*a*c));
+            r1 = (-b+delta)/(2*a);
+            r2 = (-b-delta)/(2*a);
+            
+        }else{
+            if(((b*b)-(4*a*c))==0){
+                status = 1;
+                r1 = -b/(2*a);
+                r2 = 0;
+                
+            }
+            else{
+                status =0;
+                r1 = 0;
+                r2 = 0;
+            }
+        }
+        System.out.println("Status: " + status + "\nRaiz 1: " + r1 + "\nRaiz2: " + r2);
+    }
+}
